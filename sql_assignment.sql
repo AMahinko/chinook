@@ -27,4 +27,5 @@ Artist.where("name LIKE ?", "A%")
 
 
 -- 5) Find all the tracks that belong to playlist 1.
+SELECT name, id FROM tracks WHERE id IN (SELECT track_id FROM playlists_tracks WHERE playlist_id = 1);
 
